@@ -61,29 +61,27 @@ Write an API at the path `/area` which also takes the area name after a further 
 
 If the following cats were submitted to the previous API:
 
--
-    ```json
-    {
-      "name": "Chirptar",
-      "area": "Dreamland",
-      "secretCode": "asafsnbqr"
-    }
-    ```
--
-    ```json
-    {
-      "name": "ForkMaster",
-      "area": "Dreamland",
-      "secretCode": "bston"
-    }
-    ```
+- ```json
+  {
+    "name": "Chirptar",
+    "area": "Dreamland",
+    "secretCode": "asafsnbqr"
+  }
+  ```
+- ```json
+  {
+    "name": "ForkMaster",
+    "area": "Dreamland",
+    "secretCode": "bston"
+  }
+  ```
 
 Then the API `/area/Dreamland` would return the following structure:
 
 ```json
 {
-    "name": "Dreamland",
-    "cats": ["Chirptar", "ForkMaster"]
+  "name": "Dreamland",
+  "cats": ["Chirptar", "ForkMaster"]
 }
 ```
 
@@ -96,45 +94,43 @@ First the `special number` must be determined.
 This is the index of the first letter in the cat's `secretCode` where **this letter and the previous three letters are all different**.
 
 Let's take the secret code used above `asafsnbqr` which belongs to the cat `Chirptar`.
-For the first three letters, we don't have enough letters to determine if the special number has been found.
+The first three letters are not enough to determine the special number, so our search will start at the fourth letter which is `f`.
 
-The next letter is the fourth letter `f`: together with the previous 3 letters we get `asaf`, since the letter `a` appears twice we know we have not found the special number.
+Combining the fourth letter `f` with the previous three letters gives us `asaf`, and because the letter `a` appears twice we know we have not found the special number.
 
-After `f` we have the fifth letter `s`: `s` and the previous 3 letters are `safs`, since `s` appears twice we still don't have the special number.
+After `f` we have the fifth letter `s`. Combining `s` with the previous three letters gives us `safs`. Since `s` also appears twice we still don't have the special number.
 
-The next letter is `n` which is the sixth letter, together with the previous 3 letters we have `afsn`. These letters are all different so the special number must be 6.
+The next letter is `n` which is the sixth letter. Combining `n` with the previous three letters gives us `afsn`. These letters are all different so the special number must be 6.
 
-The **ultimate code** is determined by multiplying the number of letters in the cats name with the special number.
-Since `Chirptar`'s name is `8` letters long, his secret code is `6` multiplied by `8` which gives `48`.
+The **ultimate code** is determined by multiplying the number of letters in the cat's name with the special number.
+Since `Chirptar`'s name is `8` letters long, his ultimate code is `6` multiplied by `8` which gives `48`.
 
 For part three the area API should also return a new property `ultimateCodeSum` which would be the sum of the **ultimate codes** for all cats living in that area.
 
 For the data given above:
 
--
-    ```json
-    {
-      "name": "Chirptar",
-      "area": "Dreamland",
-      "secretCode": "asafsnbqr"
-    }
-    ```
--
-    ```json
-    {
-      "name": "ForkMaster",
-      "area": "Dreamland",
-      "secretCode": "bston"
-    }
-    ```
+- ```json
+  {
+    "name": "Chirptar",
+    "area": "Dreamland",
+    "secretCode": "asafsnbqr"
+  }
+  ```
+- ```json
+  {
+    "name": "ForkMaster",
+    "area": "Dreamland",
+    "secretCode": "bston"
+  }
+  ```
 
 Then the API would return:
 
 ```json
 {
-    "name": "Dreamland",
-    "cats": ["Chirptar", "ForkMaster"],
-    "ultimateCodeSum": 88
+  "name": "Dreamland",
+  "cats": ["Chirptar", "ForkMaster"],
+  "ultimateCodeSum": 88
 }
 ```
 
