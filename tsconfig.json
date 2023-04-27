@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "incremental": true,
+    "preserveSymlinks": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "preserveWatchOutput": true,
+    "strict": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es2019",
+    "lib": ["dom", "es2019", "esnext.array", "esnext.asynciterable"],
+    "typeRoots": ["./node_modules/@types", "./types"]
+  },
+  "include": ["src"]
+}
