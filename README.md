@@ -96,11 +96,14 @@ This is the index of the first letter in the cat's `secretCode` where **this let
 Let's take the secret code used above `asafsnbqr` which belongs to the cat `Chirptar`.
 The first three letters are not enough to determine the special number, so our search will start at the fourth letter which is `f`.
 
-Combining the fourth letter `f` with the previous three letters gives us `asaf`, and because the letter `a` appears twice we know we have not found the special number.
+Combining the fourth letter `f` with the previous three letters gives us `asaf`,
+and because the letter `a` appears twice we know we have not found the special number.
 
-After `f` we have the fifth letter `s`. Combining `s` with the previous three letters gives us `safs`. Since `s` also appears twice we still don't have the special number.
+After `f` we have the fifth letter `s`. Combining `s` with the previous three letters gives us `safs`.
+Since `s` also appears twice we still don't have the special number.
 
-The next letter is `n` which is the sixth letter. Combining `n` with the previous three letters gives us `afsn`. These letters are all different so the special number must be 6.
+The next letter is `n` which is the sixth letter. Combining `n` with the previous three letters gives us `afsn`.
+These letters are all different so the special number must be 6.
 
 The **ultimate code** is determined by multiplying the number of letters in the cat's name with the special number.
 Since `Chirptar`'s name is `8` letters long, his ultimate code is `6` multiplied by `8` which gives `48`.
