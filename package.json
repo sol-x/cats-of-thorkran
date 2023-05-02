@@ -1,0 +1,23 @@
+{
+  "name": "cats-of-thorkran",
+  "version": "1.0.0",
+  "description": "test for back-end engineer",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "npm run build -- -w",
+    "start": "docker compose up postgres api",
+    "prestart-api": "npm run build",
+    "start-api": "concurrently \"npm run watch\" \"nodemon -w dist ./dist\"",
+    "postgres": "docker compose up postgres",
+    "psql": "docker compose exec -it postgres psql -U admin thorkran"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.16.1",
+    "concurrently": "^8.0.1",
+    "nodemon": "^2.0.22",
+    "typescript": "^5.0.4"
+  }
+}
